@@ -16,6 +16,18 @@ export default function() {
   */
 
   // this.namespace = 'api'
-  this.get('cards');
+  this.get('cards', function (db, request) {
+      let cards = [];
+
+      if (Object.keys(request.queryParams).length === 0) {
+        cards = db.cards.all();
+      } else {
+        const code = request.queryParams['filter[code]'];
+        cards = db.cards.where({code: code});
+      }
+
+      return cards;
+  });
+
   this.get('cards/:id');
 }
