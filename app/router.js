@@ -8,9 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('card', { path: '/:code' }, function() {
-    this.route('person', { path: '/:person' }, function() {
-      this.route('messages', { path: '/messages' });
-    });
+    this.route('messages', { path: '/:person/messages' });
   });
 });
 

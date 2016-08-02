@@ -1,6 +1,6 @@
 <p>code: {{input value=code}} {{#if loading}}loading{{/if}}</p>
 
 {{#if card}}
-  <p>{{#link-to 'card.person' 'got' card.code }}I <strong>got</strong> a card{{/link-to}}</p>
-  <p>{{#link-to 'card.person' 'gave' card.code }}I <strong>gave</strong> a card{{/link-to}}</p>
+  <p>{{#link-to 'card.messages' card.code 'got' }}I <strong>got</strong> a card{{/link-to}}</p>
+  <p>{{#link-to 'card.messages' card.code 'gave' }}I <strong>gave</strong> a card{{/link-to}}</p>
 {{/if}}
