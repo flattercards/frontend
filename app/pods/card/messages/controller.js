@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
     }, () => {
       this.set('error', 'saving.message.failed');
       this.set('message', this.get('oldMessage'));
-    })
+    });
   },
 
   actions: {
