@@ -2,8 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    // params.person
-    //
-    // return 
+    console.log(params.action);
   }
 });
