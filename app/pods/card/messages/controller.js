@@ -3,19 +3,23 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   message: null,
-  oldMessage: null,
+  messageHolder: null,
   success: null,
 
   save() {
-    this.set('oldMessage', this.get('message'));
+    // Saving the message temporarily and clear the original message so it
+    // seems faster. The field will be cleared while the users hits save.
+    this.set('messageHolder', this.get('message'));
     this.set('message', null);
+
+    // Create and save the message
     this.store.createRecord('message', {
       card: this.get('model.card'),
-      message: this.get('oldMessage'),
+      message: this.get('messageHolder'),
       from: 'sender'
     }).save().then(() => {
       this.set('success', true);
-      this.set('oldMessage', null);
+      this.set('messageHolder', null);
       this.set('message', null);
     }, () => {
       this.set('success', false);
