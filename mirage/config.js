@@ -29,5 +29,6 @@ export default function() {
       return cards;
   });
 
-  this.get('cards/:id');
+  this.get('messages/:id');
+  this.post('messages');
 }
