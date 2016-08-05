@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  beforeModel() {
     return this.transitionTo('card.index');
   }
 });
