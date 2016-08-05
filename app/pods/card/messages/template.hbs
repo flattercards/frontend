@@ -1,9 +1,13 @@
 <h2>Messages</h2>
 
-{{#each model.messages as |message|}}
+{{#each model.card.messages as |message|}}
   <p>From {{message.from}}: {{message.message}}</p>
 {{/each}}
 
+{{#if error}}
+  <p>{{error}}</p>
+{{/if}}
+
 {{textarea value=message}}
 
-<a class="button" {{action 'save'}}>Save</a>
+<p><a class="button" {{action 'save'}}>Save</a></p>
