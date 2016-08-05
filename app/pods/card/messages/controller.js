@@ -18,16 +18,6 @@ export default Ember.Controller.extend({
   }),
 
   save() {
-    // Detect who is write this message
-    let from;
-    if (this.get('model.action') === 'write') {
-      from = 'sender';
-    } else if (this.get('model.action') === 'receive') {
-      from = 'receiver';
-    } else {
-      return this.set('error', 'person.from.is.incorrect');
-    }
-
     // Saving the message temporarily and clear the original message so it
     // seems faster. The field will be cleared while the users hits save.
     this.set('messageHolder', this.get('message'));
@@ -35,7 +25,7 @@ export default Ember.Controller.extend({
 
     // Create and save the message
     this.store.createRecord('message', {
-      from,
+      from: this.get('model.from'),
       card: this.get('model.card'),
       message: this.get('messageHolder'),
     }).save().then(() => {
