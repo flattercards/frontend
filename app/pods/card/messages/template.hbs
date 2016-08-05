@@ -4,6 +4,10 @@
   <p>From {{message.from}}: {{message.message}}</p>
 {{/each}}
 
+{{#if error}}
+  <p>{{error}}</p>
+{{/if}}
+
 {{textarea value=message}}
 
 <p><a class="button" {{action 'save'}}>Save</a></p>
