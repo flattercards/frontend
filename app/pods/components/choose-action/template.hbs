@@ -1,4 +1,4 @@
 {{#if card}}
-  <p>{{#link-to 'card.messages' card.code 'receive' }}I <strong>got</strong> a card{{/link-to}}</p>
-  <p>{{#link-to 'card.messages' card.code 'write' }}I <strong>gave</strong> a card{{/link-to}}</p>
+  <p>{{#link-to 'card.messages' card.code 'receive' }}{{t 'card.got'}}{{/link-to}}</p>
+  <p>{{#link-to 'card.messages' card.code 'write' }}{{t 'card.gave'}}{{/link-to}}</p>
 {{/if}}
