@@ -1,13 +1,25 @@
 import Ember from 'ember';
+const { Route } = Ember;
 
-export default Ember.Route.extend({
+export default Route.extend({
   model(params) {
-    return this.store.query('card', { filter: { code: params.code }, include: 'messages' }).then(cards => {
-      const card = cards.get('firstObject');
-      if (!card) return this.transitionTo('index');
-      return card;
-    }, () => {
-      return this.transitionTo('offline');
+    return this.store.query('card', {
+      filter: {
+        code: params.code
+      },
+      include: 'messages'
     });
+  },
+
+  afterModel(model) {
+    if (model.get('length') === 0) {
+      return this.transitionTo('index');
+    }
+  },
+
+  actions: {
+    error() {
+      return this.intermediateTransitionTo('offline');
+    }
   }
 });
