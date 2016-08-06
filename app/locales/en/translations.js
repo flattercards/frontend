@@ -9,5 +9,8 @@ export default {
   },
   messages: {
     title: 'Messages'
+  },
+  api: {
+    down: 'Oops, the connection to the API is gone.'
   }
 };

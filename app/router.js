@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('messages', { path: '/:from/messages' });
     this.route('404', { path: '*path'});
   });
+  this.route('offline');
 });
 
 export default Router;

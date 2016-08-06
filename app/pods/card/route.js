@@ -6,6 +6,8 @@ export default Ember.Route.extend({
       const card = cards.get('firstObject');
       if (!card) return this.transitionTo('index');
       return card;
+    }, () => {
+      return this.transitionTo('offline');
     });
   }
 });

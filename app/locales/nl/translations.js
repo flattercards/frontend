@@ -9,5 +9,8 @@ export default {
   },
   messages: {
     title: 'Berichten'
+  },
+  api: {
+    down: 'Oeps, we hebben geen verbinding met de API.'
   }
 };
