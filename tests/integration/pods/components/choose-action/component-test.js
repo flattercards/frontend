@@ -32,6 +32,6 @@ test('it renders with and without card', function(assert) {
     {{choose-action card=card}}
   `);
 
-  assert.equal(this.$('a:first').text().trim(), 'I got a card');
-  assert.equal(this.$('a:last').text().trim(), 'I gave a card');
+  assert.equal(this.$('a:first').text().trim(), 'Ik heb een kaartje gekregen');
+  assert.equal(this.$('a:last').text().trim(), 'Ik heb een kaartje gegeven');
 });

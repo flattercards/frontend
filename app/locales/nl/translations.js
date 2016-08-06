@@ -1,7 +1,7 @@
 export default {
   card: {
-    got: 'Ik een kaartje <strong>gekregen</strong>',
-    gave: 'Ik een kaartje <strong>gegeven</strong>',
+    got: 'Ik heb een kaartje <strong>gekregen</strong>',
+    gave: 'Ik heb een kaartje <strong>gegeven</strong>',
   },
   code: {
     change: 'Wijzig code',
