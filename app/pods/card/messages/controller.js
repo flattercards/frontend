@@ -27,7 +27,7 @@ export default Ember.Controller.extend({
     this.store.createRecord('message', {
       from: this.get('model.from'),
       card: this.get('model.card'),
-      message: this.get('messageHolder'),
+      body: this.get('messageHolder'),
     }).save().then(() => {
       this.set('error', false);
       this.set('messageHolder', null);

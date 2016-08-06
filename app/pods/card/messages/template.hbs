@@ -1,7 +1,7 @@
 <h2>{{t 'messages.title'}}</h2>
 
 {{#each model.card.messages as |message|}}
-  <p>From {{message.from}}: {{message.message}}</p>
+  <p>From {{message.from}}: {{message.body}}</p>
 {{/each}}
 
 {{#if error}}
