@@ -11,6 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test --server",
+    "deploy": "./scripts/deploy.sh",
     "fastboot": "ember fastboot --serve-assets"
   },
   "repository": "",
