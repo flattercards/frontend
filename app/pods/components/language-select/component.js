@@ -16,7 +16,10 @@ export default Ember.Component.extend({
 
   actions: {
     setLocale() {
-      this.set('i18n.locale', this.$('select').val());
+      const language = this.$('select').val();
+      this.set('i18n.locale', language);
+      if (!window.localStorage || !window.localStorage.setItem) return;
+      window.localStorage.setItem('language', language);
     }
   }
 });

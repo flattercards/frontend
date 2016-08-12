@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import fetch from 'ember-network/fetch';
 const {
   Controller,
   on
@@ -7,34 +6,21 @@ const {
 
 export default Controller.extend({
   i18n: Ember.inject.service(),
-  alert: null,
-  from: null,
+  alert: false,
 
-  fetchCountry: on('init', function() {
-    if (this.get('i18n.locale') === 'en') return;
-    fetch('http://ipinfo.io', {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }).then(response => {
-      const user = JSON.parse(response._bodyText);
-      if (user.country !== 'NL') {
-        this.showChangeToEnglish(user);
-      }
-    });
-  }),
-
-  showChangeToEnglish(user) {
-    const from = user.region || 'outside The Netherlands'
+  checkLocale: on('init', function() {
+    if (!window.localStorage || !window.localStorage.setItem) return;
+    const language = window.localStorage.getItem('language');
+    if (language) return this.set('i18n.locale', language);
     this.set('alert', true);
-    this.set('from', from);
-  },
+  }),
 
   actions: {
     changeLang(language) {
       this.set('alert', false);
       this.set('i18n.locale', language);
+      if (!window.localStorage || !window.localStorage.setItem) return;
+      window.localStorage.setItem('language', language);
     }
   }
 });

@@ -31,5 +31,4 @@ export default function() {
 
   this.get('messages/:id');
   this.post('messages');
-  this.passthrough('http://ipinfo.io');
 }

@@ -6,12 +6,10 @@
 
 <main class="container">
   {{#if alert}}
-    <div class="alert">
-      <p>
-        <a {{action 'changeLang' 'en'}}>Change to English</a>?
-        Because you are maybe from {{from}}.
-      </p>
-    </div>
+    <p>
+      <a {{action 'changeLang' 'en'}}>Change to English</a>?
+      Of ben je <a {{action 'changeLang' 'nl'}}>Nederlands</a>.
+    </p>
   {{/if}}
 
   {{outlet}}
