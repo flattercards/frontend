@@ -1,0 +1,38 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  flex: 0 1 auto;
+  background-color: $color-primary;
+  color: white;
+  text-align: center;
+
+  & > div {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+main {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+footer {
+  flex: 0 0 auto;
+  text-align: center;
+  color: $color-gray-light;
+  font-size: 12px;
+}
