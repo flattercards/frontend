@@ -1,44 +1,25 @@
-<h2>How does it work?</h2>
-
+<h2>{{t 'how_it_works.title'}}</h2>
 <ol class="how-it-works">
-  <li>Order ten physical cards on this website</li>
-  <li>Surprise someone with one of those cards</li>
-  <li>Write a message online with the code of that card</li>
-  <li>The receiver can now read your message!</li>
-  <li>Whould you get a message back?</li>
+  {{#each steps as |index|}}
+    {{#if (t (concat 'how_it_works.steps.' index))}}
+      <li>{{t (concat 'how_it_works.steps.' index)}}</li>
+    {{/if}}
+  {{/each}}
 </ol>
 
+<h2>{{t 'what_is_flatter.title'}}</h2>
+{{t 'what_is_flatter.text'}}
 
-<h2>What is flatter?</h2>
-
-<p>Receiving complements is fun, anyone can do it, however,
-how fun would it be to do it in a new, different, and original way? That's
-way we created flatter.cards.</p>
-
-<p>When you order a flatter card, it comes apart
-  into two pieces, each having your unique code. With this code you can leave a message online.
-  You will get a notification when the lucky recipient has read your message.</p>
-
-
-<h2>FAQ</h2>
-
-<p><strong>What is the receiver looks before I wrote a message?</strong><br>
-The receiver will than get the question to leave their email address,
-so they can get a notification when you do write your message.</p>
-
-
-<h2>Search for your card</h2>
-
+<h2>{{t 'search.title'}}</h2>
 <div class="card">
-  {{input class="input" value=code placeholder="Type your code..."}}
+  {{input class="input" value=code placeholder=(t 'search.type_code')}}
 </div>
 {{choose-action card=card}}
 
-
-<h2>Order your cards</h2>
-
-<p>Our first batch of cards will be free of charge. We don't know if the second
-batch will also be free, so be quick! Order your cards and give them to people
-you like.</p>
+<h2>{{t 'order.title'}}</h2>
+{{t 'order.text'}}
 
 {{order-cards}}
+
+<h2>{{t 'faq.title'}}</h2>
+{{t 'faq.text'}}

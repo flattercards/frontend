@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
   code: null,
   card: null,
   loading: false,
+  steps: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 
   onCodeChange: observer('code', function() {
     this.set('loading', true);
