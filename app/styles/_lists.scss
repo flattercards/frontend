@@ -1,0 +1,45 @@
+$circle-size: 40px;
+
+ol.how-it-works {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  transition: margin-left 1s;
+
+  @media(min-width: 500px) {
+    margin-left: 80px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &::before {
+      flex: 0 0 auto;
+      content: '1.';
+      width: $circle-size;
+      height: $circle-size;
+      text-align: center;
+      line-height: $circle-size;
+      background-color: $color-primary;
+      border-radius: 50%;
+      color: white;
+      margin-right: 10px;
+    }
+  }
+  li:nth-of-type(2)::before {
+    content: '2.';
+  }
+  li:nth-of-type(3)::before {
+    content: '3.';
+  }
+  li:nth-of-type(4)::before {
+    content: '4.';
+  }
+  li:nth-of-type(5)::before {
+    content: '5.';
+  }
+  li:nth-of-type(6)::before {
+    content: '6.';
+  }
+}
