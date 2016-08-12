@@ -1,3 +1,3 @@
-export default function(locale, key, context) {
+export default () => {
   return false;
 }
