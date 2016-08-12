@@ -7,8 +7,13 @@ $card-dot-line: 80px;
   display: inline-block;
   background-color: $color-primary;
   border-radius: 5px;
-  padding: 30px;
-  padding-right: 30px + $card-dot-line;
+  padding: 15px;
+  padding-right: 15px + $card-dot-line;
+  @media(min-width: 350px) {
+    padding: 30px;
+    padding-right: 30px + $card-dot-line;
+  }
+  transition: padding 1s;
   input {
     border-radius: $radius;
     border: none;
