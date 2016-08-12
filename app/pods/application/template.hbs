@@ -5,6 +5,15 @@
 </header>
 
 <main class="container">
+  {{#if alert}}
+    <div class="alert">
+      <p>
+        <a {{action 'changeLang' 'en'}}>Change to English</a>?
+        Because you are maybe from {{from}}.
+      </p>
+    </div>
+  {{/if}}
+
   {{outlet}}
 </main>
 
