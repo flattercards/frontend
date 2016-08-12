@@ -50,5 +50,12 @@ export default {
     batch will also be free, so be quick! Order your cards and give them to people
     you like.</p>`
   },
-  by: 'door'
+  by: 'door',
+  change_language: 'Change language',
+  language_select: {
+    language: {
+      nl: 'Dutch',
+      en: 'English',
+    }
+  }
 };
