@@ -3,6 +3,7 @@ $card-dot-line: 80px;
 .card {
   position: relative;
   width: 320px;
+  max-width: 100%;
   display: inline-block;
   background-color: $color-primary;
   border-radius: 5px;
