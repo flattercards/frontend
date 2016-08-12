@@ -1,0 +1,96 @@
+$radius: 3px;
+
+@import 'reset';
+@import 'colors';
+@import 'typography';
+@import 'forms';
+@import 'buttons';
+
+[data-ember-action]:not(:disabled) {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  flex: 0 1 auto;
+  background-color: $color-primary;
+  color: white;
+  text-align: center;
+
+  & > div {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+}
+
+main {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+footer {
+  flex: 0 0 auto;
+  text-align: center;
+  color: $color-gray-light;
+  font-size: 12px;
+}
+
+div.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+$card-dot-line: 80px;
+
+.card {
+  position: relative;
+  width: 320px;
+  display: inline-block;
+  background-color: $color-primary;
+  border-radius: 5px;
+  padding: 30px;
+  padding-right: 30px + $card-dot-line;
+  input {
+    border-radius: $radius;
+    border: none;
+    margin-top: 80px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 100%;
+    background-color: white;
+    color: black;
+  }
+  a {
+    color: white;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    right: $card-dot-line;
+    top: 0;
+    bottom: 0;
+    border-left: 2px dashed white;
+  }
+}

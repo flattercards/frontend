@@ -1,3 +1,19 @@
-<h1>{{#link-to 'index'}}flatter.cards{{/link-to}}</h1>
+<header>
+  <div class="container">
+    <h1>{{#link-to 'index'}}flatter.cards{{/link-to}}</h1>
+  </div>
+</header>
 
-{{outlet}}
+<main class="container">
+  {{outlet}}
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Flatter</strong>.cards by <a href="http://adriaan.io">Adriaan van Rossum</a>
+      </p>
+    </div>
+  </div>
+</footer>

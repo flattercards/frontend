@@ -1,3 +1,21 @@
-<p>code: {{input value=code}} {{#if loading}}loading{{/if}}</p>
+<h2>What is flatter?</h2>
 
+<p>Receiving complements is fun, but giving them is not always easy.
+Sometimes the time is not right or you want to phrase your complement carefully.</p>
+
+<p>That is why you need flatter. When you order a flatter card, it comes apart
+  into two pieces, each having your unique code. With this code you can leave a message online.
+  You will get a notification when the lucky recipient has read your message.</p>
+
+<h2>Search for your card</h2>
+<div class="card">
+  {{input class="input" value=code placeholder="Type your code..."}}
+</div>
 {{choose-action card=card}}
+
+<h2>Order your cards</h2>
+<p>Our first batch of cards will be free of charge. We don't know if the second
+batch will also be free, so be quick! Order your cards and give them to people
+you like.</p>
+
+{{order-cards}}

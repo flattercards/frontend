@@ -1,0 +1,44 @@
+<p class="{{if showingForm 'hidden' 'show'}}"><a class="button" {{action 'showForm'}}>Order these cards!</a></p>
+
+<form class="order {{if showingForm 'show' 'hidden'}}">
+  <label for="name">Your name</label>
+  <input type="text" id="name" required="required">
+
+  <label for="email">Your email address</label>
+  <input type="text" id="email" required="required">
+
+  <div class="autocomplete">
+    <label for="autocomplete">Your address</label>
+    <input id="autocomplete" type="text" placeholder="just start typing...">
+  </div>
+
+  <div class="address">
+    <div class="row divide-70-30">
+      <div>
+        <label for="route">Street</label>
+        <input type="text" id="route">
+      </div>
+      <div>
+        <label for="street_number">Number</label>
+        <input type="text" id="street_number">
+      </div>
+    </div>
+
+    <div class="row divide-40-60">
+      <div>
+        <label for="postal_code">Postal code</label>
+        <input type="text" id="postal_code">
+      </div>
+      <div>
+        <label for="locality">City</label>
+        <input type="text" id="locality">
+      </div>
+    </div>
+
+    <label for="country">Country</label>
+    <input id="country" type="text">
+  </div>
+
+  <p><a class="button" {{action 'submit'}}>Send me those awesome cards</a></p>
+
+</form>

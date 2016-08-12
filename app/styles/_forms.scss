@@ -1,0 +1,60 @@
+textarea {
+  height: 250px;
+  width: 100%;
+  border: 1px solid $color-primary;
+  border-radius: $radius;
+  resize: vertical;
+}
+
+form {
+  input[type="text"] {
+    padding: 10px 10px;
+    border: 1px solid $color-gray-dark;
+    border-radius: 3px;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+
+    & + input {
+      margin-top: 10px;
+    }
+  }
+
+  label {
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    color: $color-gray-dark;
+    margin-bottom: 5px;
+  }
+
+  .address {
+    // display: none;
+  }
+
+  .row {
+    display: flex;
+
+    div:last-of-type {
+      margin-left: 5%;
+    }
+
+    &.divide-70-30 {
+      div:first-of-type {
+        width: 67.5%;
+      }
+      div:last-of-type {
+        width: 27.5%;
+      }
+    }
+
+    &.divide-40-60 {
+      div:first-of-type {
+        width: 37.5%;
+      }
+      div:last-of-type {
+        width: 57.5%;
+      }
+    }
+  }
+}

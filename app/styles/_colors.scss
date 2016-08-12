@@ -1,0 +1,20 @@
+$color-black: black;
+$color-gray-darkest: mix(white, black, 13%); // #222222
+$color-gray-darker: mix(white, black, 26%); // #666666
+$color-gray-dark: mix(white, black, 40%); // #666666
+$color-gray-medium: mix(white, black, 60%); // #999999
+$color-gray-light: mix(white, black, 73%); // #bbbbbb
+$color-gray-lighter: mix(white, black, 87%); // #dddddd
+$color-gray-lightest: mix(white, black, 93%); // #eeeeee
+$color-white: white;
+
+// Third party branding
+$color-brand-facebook: #3b5997;
+$color-brand-twitter: #55acee;
+$color-brand-whatsapp: #34af23;
+$color-brand-googleplus: #dd4b39;
+$color-brand-linkedin: #0976b4;
+
+$color-primary: #1fc8db !default;
+$color-primary: #e0463b;
+$color-secondary: #9c27b0;

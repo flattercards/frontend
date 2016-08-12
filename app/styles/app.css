@@ -1,8 +1,0 @@
-textarea {
-  width: 500px;
-  height: 250px;
-}
-
-[data-ember-action]:not(:disabled) {
-  cursor: pointer;
-}
