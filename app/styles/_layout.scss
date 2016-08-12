@@ -20,8 +20,14 @@ header {
   text-align: center;
 
   & > div {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: padding 1s;
+
+    @media(min-width: 500px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 }
 
