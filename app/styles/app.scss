@@ -5,6 +5,7 @@ $radius: 3px;
 @import 'typography';
 @import 'forms';
 @import 'buttons';
+@import 'animations';
 
 [data-ember-action]:not(:disabled) {
   cursor: pointer;
@@ -39,7 +40,6 @@ header {
     padding-top: 70px;
     padding-bottom: 70px;
   }
-
 }
 
 main {
