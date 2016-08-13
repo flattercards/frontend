@@ -1,5 +1,7 @@
-import Ember from "ember";
+import Ember from 'ember';
 
-export default Ember.Helper.helper(([leftSide, rightSide]) => {
-  return leftSide === rightSide;
-});
+export function isEqual(params) {
+  return params[0] === params[1];
+}
+
+export default Ember.Helper.helper(isEqual);
