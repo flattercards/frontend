@@ -6,20 +6,3 @@
     {{/if}}
   {{/each}}
 </ol>
-
-<h2>{{t 'what_is_flatter.title'}}</h2>
-{{t 'what_is_flatter.text'}}
-
-<h2>{{t 'search.title'}}</h2>
-<div class="card">
-  {{input class="input" value=code placeholder=(t 'search.type_code')}}
-</div>
-{{choose-action card=card}}
-
-<h2>{{t 'order.title'}}</h2>
-{{t 'order.text'}}
-
-{{order-cards}}
-
-<h2>{{t 'faq.title'}}</h2>
-{{t 'faq.text'}}

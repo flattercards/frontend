@@ -1,4 +1,11 @@
 export default {
+  nav: {
+    how: 'How does it work?',
+    what: 'What is it?',
+    search: 'Search card',
+    order: 'Order',
+    faq: 'F.A.Q.',
+  },
   card: {
     got: 'I <strong>got</strong> a card',
     gave: 'I <strong>gave</strong> a card'

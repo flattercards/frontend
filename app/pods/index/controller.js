@@ -1,27 +1,8 @@
 import Ember from 'ember';
 const {
-  observer
+  Controller
 } = Ember;
 
-export default Ember.Controller.extend({
-  code: null,
-  card: null,
-  loading: false,
-  steps: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-
-  onCodeChange: observer('code', function() {
-    this.set('loading', true);
-    Ember.run.debounce(this, this.checkCode, 300);
-  }),
-
-  checkCode() {
-    const code = this.get('code');
-    this.store.query('card', { filter: { code } }).then(cards => {
-      this.set('loading', false);
-      const card = cards.get('firstObject');
-      if (!card) return this.set('card', null);
-      return this.set('card', card);
-    });
-
-  }
+export default Controller.extend({
+  steps: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 });

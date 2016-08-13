@@ -1,4 +1,11 @@
 export default {
+  nav: {
+    how: 'Hoe werkt het?',
+    what: 'Wat is dit?',
+    search: 'Zoek kaart',
+    order: 'Bestel',
+    faq: 'F.A.Q.',
+  },
   card: {
     got: 'Ik heb een kaartje <strong>gekregen</strong>',
     gave: 'Ik heb een kaartje <strong>gegeven</strong>',
