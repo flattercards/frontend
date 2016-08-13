@@ -11,7 +11,7 @@ cache:
 
 before_install:
   - npm config set spin false
-  - npm install -g bower
+  - npm install -g bower surge ember
   - bower --version
   - npm install phantomjs-prebuilt
   - phantomjs --version
@@ -22,3 +22,8 @@ install:
 
 script:
   - npm test
+
+after_success:
+  - ember build --environment production
+  - cp dist/index.html dist/200.html
+  - surge --project dist --domain flatter.cards

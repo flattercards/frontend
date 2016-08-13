@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist flatter.surge.sh"
+    "deploy": "echo \"Deploy is handled by Travis.\""
   },
   "repository": "",
   "engines": {
