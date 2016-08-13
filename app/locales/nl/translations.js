@@ -57,7 +57,7 @@ export default {
     batch will also be free, so be quick! Order your cards and give them to people
     you like.</p>`
   },
-  by: 'door',
+  created_by: 'ontwikkeld door',
   change_language: 'Change language',
   language_select: {
     language: {

@@ -57,7 +57,7 @@ export default {
     batch will also be free, so be quick! Order your cards and give them to people
     you like.</p>`
   },
-  by: 'by',
+  created_by: 'created by',
   change_language: 'Wijzig taal',
   language_select: {
     language: {
