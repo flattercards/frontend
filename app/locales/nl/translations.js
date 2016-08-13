@@ -4,7 +4,7 @@ export default {
     what: 'Wat is dit?',
     search: 'Zoek kaart',
     order: 'Bestel',
-    faq: 'F.A.Q.',
+    faq: 'FAQ',
   },
   card: {
     got: 'Ik heb een kaartje <strong>gekregen</strong>',

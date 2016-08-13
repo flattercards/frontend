@@ -4,7 +4,7 @@ export default {
     what: 'What is it?',
     search: 'Search card',
     order: 'Order',
-    faq: 'F.A.Q.',
+    faq: 'FAQ',
   },
   card: {
     got: 'I <strong>got</strong> a card',
