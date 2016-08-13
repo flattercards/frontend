@@ -16,7 +16,7 @@ ol.how-it-works {
     margin-bottom: 10px;
     &::before {
       flex: 0 0 auto;
-      content: '1.';
+      content: '1';
       width: $circle-size;
       height: $circle-size;
       text-align: center;
@@ -28,18 +28,18 @@ ol.how-it-works {
     }
   }
   li:nth-of-type(2)::before {
-    content: '2.';
+    content: '2';
   }
   li:nth-of-type(3)::before {
-    content: '3.';
+    content: '3';
   }
   li:nth-of-type(4)::before {
-    content: '4.';
+    content: '4';
   }
   li:nth-of-type(5)::before {
-    content: '5.';
+    content: '5';
   }
   li:nth-of-type(6)::before {
-    content: '6.';
+    content: '6';
   }
 }
