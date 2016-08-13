@@ -31,4 +31,5 @@ export default function() {
 
   this.get('messages/:id');
   this.post('messages');
+  this.passthrough('https://freegeoip.net/json/');
 }
